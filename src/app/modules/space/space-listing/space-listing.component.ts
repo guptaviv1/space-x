@@ -19,6 +19,7 @@ export class SpaceListingComponent implements OnInit {
   };
   public options;
   public yearFilters = Constants.YEAR_FILTERS;
+  public developer = Constants.DEVELOPER;
   constructor(
     private readonly spaceService: SpaceServiceService,
     private readonly route: ActivatedRoute,

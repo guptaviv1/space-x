@@ -22,5 +22,6 @@ export class Constants {
         { year: '2019', active: false },
         { year: '2020', active: false }
         ];
+    public static readonly DEVELOPER = 'Vivek Kumar';
 
 }
