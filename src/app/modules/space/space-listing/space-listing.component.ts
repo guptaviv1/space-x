@@ -49,20 +49,20 @@ export class SpaceListingComponent implements OnInit {
 
   changeQueryParams(params): Promise<boolean> {
 
-    return this.router.navigate([],{
-        relativeTo: this.route,
-        queryParams: params,
-        queryParamsHandling: 'merge'
-      });
+    return this.router.navigate([], {
+      relativeTo: this.route,
+      queryParams: params,
+      queryParamsHandling: 'merge'
+    });
   }
 
   getDataByFilter(selectedFilter, value): void {
-    if(this.defaultLimit[selectedFilter] === value) {
+    if (this.defaultLimit[selectedFilter] === value) {
       this.defaultLimit[selectedFilter] = '';
     } else {
       this.defaultLimit[selectedFilter] = value;
     }
-    
+
     this.changeQueryParams(this.defaultLimit);
   }
 
@@ -76,8 +76,8 @@ export class SpaceListingComponent implements OnInit {
   @HostListener('window:scroll', ['$event']) // for window scroll events
   onScroll(event): void {
     if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight &&
-    Number(this.defaultLimit.limit) < Constants.MAGIC_NUMBERS.ONE_TWENTY &&
-    Number(this.defaultLimit.limit) === this.spaceListing?.length) {
+      Number(this.defaultLimit.limit) < Constants.MAGIC_NUMBERS.ONE_TWENTY &&
+      Number(this.defaultLimit.limit) === this.spaceListing?.length) {
       const target = event.target;
       this.defaultLimit = {
         ...this.defaultLimit,
