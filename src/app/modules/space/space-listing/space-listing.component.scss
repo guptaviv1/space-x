@@ -1,7 +1,7 @@
 * {
 	box-sizing: border-box;
 }
-html, body, Ul, li, figure {
+html, body, Ul, figure {
 	padding: 0;
 	margin: 0;
 	font-family: Arial, Helvetica, sans-serif;
@@ -41,6 +41,11 @@ h4 {
 .filters button:hover, .filters button:focus, .filters button.active {
 	background: rgb(93, 139, 89);
 	border: rgb(93, 139, 89);
+}
+
+.filters button.inactive {
+	background: lightgreen;
+	border: lightgreen;
 }
 
 .container {
@@ -104,6 +109,9 @@ img {
 	.card-container .set {
 		width: 50%;
 	}
+	.mobile-center {
+		text-align: center;
+	}
 	}
 @media (max-width: 767px) {
 	.card-container .set {
@@ -114,6 +122,9 @@ img {
 	}
 	.card-container {
 		width: 75%;
+	}
+	.mobile-center {
+		text-align: center;
 	}
 }
 @media (max-width: 599px) {
@@ -137,4 +148,12 @@ img {
 	text-align: center;
 	font-size: 14px;
 	font-weight: 600;
+}
+.list-style {
+	padding: 0px 0px 0px 25px;
+	span {
+		color: gray;
+		margin-left: auto;
+		font-size: 12px;
+	}
 }

@@ -48,9 +48,8 @@ export class SpaceListingComponent implements OnInit {
   }
 
   changeQueryParams(params): Promise<boolean> {
-    return this.router.navigate(
-      [],
-      {
+
+    return this.router.navigate([],{
         relativeTo: this.route,
         queryParams: params,
         queryParamsHandling: 'merge'
@@ -58,7 +57,12 @@ export class SpaceListingComponent implements OnInit {
   }
 
   getDataByFilter(selectedFilter, value): void {
-    this.defaultLimit[selectedFilter] = value;
+    if(this.defaultLimit[selectedFilter] === value) {
+      this.defaultLimit[selectedFilter] = '';
+    } else {
+      this.defaultLimit[selectedFilter] = value;
+    }
+    
     this.changeQueryParams(this.defaultLimit);
   }
 
@@ -82,4 +86,5 @@ export class SpaceListingComponent implements OnInit {
       this.changeQueryParams(this.defaultLimit);
     }
   }
+
 }
