@@ -66,18 +66,33 @@ aside {
 	width: 85%;
 	float: left;
 	padding-left: 10px;
-	height: 670px;
-	overflow-y: scroll;
 	.set {
 		width: 25%;
 		padding: 0 5px;
 		margin-bottom: 15px;
-		float: left;
+		display: flex;
+		-webkit-box-orient: horizontal;
+		-webkit-box-direction: normal;
+		flex-direction: row;
 	}
+
+}
+.card-wrap-outer {
+	display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
 }
 .card {
 	padding: 10px;
 	background: #fff;
+	display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    flex-direction: column;
+    width: 100%;
 	figure {
 		text-align: center;
 	}
@@ -109,8 +124,11 @@ img {
 	.card-container .set {
 		width: 50%;
 	}
-	.mobile-center {
-		text-align: center;
+	aside {
+		width: 25%;
+	}
+	.card-container {
+		width: 75%;
 	}
 	}
 @media (max-width: 767px) {
@@ -122,9 +140,6 @@ img {
 	}
 	.card-container {
 		width: 75%;
-	}
-	.mobile-center {
-		text-align: center;
 	}
 }
 @media (max-width: 599px) {

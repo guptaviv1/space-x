@@ -34,7 +34,7 @@
         </div>
     </aside>
     <div class="card-container">
-        <div *ngIf="spaceListing?.length">
+        <div class="card-wrap-outer" *ngIf="spaceListing?.length">
             <div class="set" *ngFor="let space of spaceListing" (scroll)="onScrolling($event)">
                 <div class="card">
                     <figure>
@@ -43,8 +43,8 @@
                     </figure>
                     <div class="card-content">
                         <h3>{{space?.mission_name.slice(0, 10)}}...#{{space?.flight_number}}</h3>
-                        <p>Mission Ids <span *ngIf="!space?.mission_id?.length">-</span></p>
-                        <ul *ngIf="space?.mission_id?.length" class="list-style">
+                        <p>Mission Ids <span *ngIf="!space?.mission_id?.length">N.A</span></p>
+                        <ul class="list-style">
                             <li *ngFor="let missionId of space?.mission_id"><span>{{missionId}}</span></li>
                         </ul>
                         <p>Launch year <span>{{space?.launch_year}}</span></p>
