@@ -4,7 +4,7 @@
         <h3>Filters</h3>
         <h4>launch year</h4>
         <div class="filters">
-            <div class="mobile-center">
+            <div class="mob-center">
                 <button *ngFor="let year of yearFilters" (click)="getDataByFilter('launch_year', year.year)"
                     [ngClass]="{'active': defaultLimit.launch_year === year.year, 'inactive': defaultLimit.launch_year !== year.year }">{{year.year}}</button>
             </div>
@@ -12,7 +12,7 @@
         </div>
         <h4>Successful launch</h4>
         <div class="filters">
-            <div class="mobile-center">
+            <div class="mob-center">
                 <button
                     [ngClass]="{'active': defaultLimit?.launch_success === 'true', 'inactive': defaultLimit?.launch_success !== 'true'}"
                     (click)="getDataByFilter('launch_success', true)">True</button>
@@ -23,7 +23,7 @@
         </div>
         <h4>Successful landing</h4>
         <div class="filters">
-            <div class="mobile-center">
+            <div class="mob-center">
                 <button
                     [ngClass]="{'active': defaultLimit?.land_success === 'true', 'inactive': defaultLimit?.land_success !== 'true'}"
                     (click)="getDataByFilter('land_success', true)">True</button>
@@ -42,7 +42,7 @@
                             src="{{space?.links?.mission_patch_small}}" alt="" />
                     </figure>
                     <div class="card-content">
-                        <h3>{{space?.mission_name.slice(0, 10)}}...#{{space?.flight_number}}</h3>
+                        <h3>{{space?.mission_name.slice(0, 10)}}.. #{{space?.flight_number}}</h3>
                         <p>Mission Ids <span *ngIf="!space?.mission_id?.length">N.A</span></p>
                         <ul class="list-style">
                             <li *ngFor="let missionId of space?.mission_id"><span>{{missionId}}</span></li>
@@ -59,7 +59,7 @@
         </div>
     </div>
     <div class="developer">
-        <span>Developed by: {{ developer }}</span>
+        <span>Developed by: <span class="name">{{developer}}</span></span>
     </div>
 
 </div>

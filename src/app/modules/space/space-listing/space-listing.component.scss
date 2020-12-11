@@ -5,34 +5,41 @@ html, body, Ul, figure {
 	padding: 0;
 	margin: 0;
 	font-family: Arial, Helvetica, sans-serif;
-	font-size: 14px;
+	font-size: 0.875em;
 }
 h1 {
-	font-size: 32px;
+	font-size: 2em;
 	font-weight: 700;
 	color: #000;
 }
 
 h3 {
-	font-size: 24px;
+	font-size: 1.5em;
 	font-weight: 700;
 	color: #000;
 }
 
 h4 {
-	font-size: 16px;
+	font-size: 1em;
 	font-weight: normal;
-	color: #000;
-	border-bottom: 1px solid #111;
+	color: #111111;
+	border-bottom: 1px solid #808080;
 	text-align: center;
+	margin-left: 1em;
+    margin-right: 1em;
+}
+.mob-center {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
 }
 .filters button {
 	background: lightgreen;
 	border: lightgreen;
-	padding: 6px 12px;
+	padding: 0.375em 0.75em;
 	text-align: center;
 	color: #000;
-	font-size: 12px;
+	font-size: 0.75em;
 	border-radius: 5px;
 	margin-bottom: 5px;
 	cursor: pointer;
@@ -101,7 +108,7 @@ img {
 	max-width: 60%;
 }
 .card-content h3 {
-	font-size: 16px;
+	font-size: 1em;
 	color: rgb(1, 1, 138);
 }
 .card-content p {
@@ -161,14 +168,17 @@ img {
 }
 .developer {
 	text-align: center;
-	font-size: 14px;
+	font-size: 0.875em;
 	font-weight: 600;
+	.name {
+		font-weight: 400;
+	}
 }
 .list-style {
 	padding: 0px 0px 0px 25px;
 	span {
 		color: gray;
 		margin-left: auto;
-		font-size: 12px;
-	}
+		font-size: 0.75em;
+	}	
 }
