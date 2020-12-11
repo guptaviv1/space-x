@@ -7,26 +7,27 @@ html, body, Ul, figure {
 	font-family: Arial, Helvetica, sans-serif;
 	font-size: 0.875em;
 }
+h1, h2, h3, h4 {
+	text-transform: capitalize;
+	color: #000;
+	font-weight: 700;
+}
+
 h1 {
 	font-size: 2em;
-	font-weight: 700;
-	color: #000;
 }
 
 h3 {
 	font-size: 1.5em;
-	font-weight: 700;
-	color: #000;
 }
 
 h4 {
-	font-size: 1em;
+	font-size: 0.875em;
 	font-weight: normal;
 	color: #111111;
 	border-bottom: 1px solid #808080;
 	text-align: center;
-	margin-left: 1em;
-    margin-right: 1em;
+	margin: 0.75em 1.75em;
 }
 .mob-center {
 	display: flex;
@@ -110,6 +111,7 @@ img {
 .card-content h3 {
 	font-size: 1em;
 	color: rgb(1, 1, 138);
+	text-transform: capitalize;
 }
 .card-content p {
 	font-size: 12px;
@@ -117,52 +119,13 @@ img {
 	font-weight: 600;
 	display: flex;
 	flex-wrap: wrap;
+	text-transform: capitalize;
 }
 .card-content p span {
 	color: gray;
 	margin-left: auto;
 }
-@media (max-width: 1024px) {
-	.card-container .set {
-		width: 33.3333333%;
-	}
-}
-@media (min-width: 768px) and (max-width: 1024px) {
-	.card-container .set {
-		width: 50%;
-	}
-	aside {
-		width: 25%;
-	}
-	.card-container {
-		width: 75%;
-	}
-	}
-@media (max-width: 767px) {
-	.card-container .set {
-		width: 50%;
-	}
-	aside {
-		width: 25%;
-	}
-	.card-container {
-		width: 75%;
-	}
-}
-@media (max-width: 599px) {
-	.card-container .set {
-		width: 100%;
-		padding: 0;
-	}
-	aside {
-		width: 100%;
-	}
-	.card-container {
-		width: 100%;
-		padding: 15px 0 0 0;
-	}
-}
-.launch-program-page{
+.launch-program-page {
 	text-align: center;
 	margin-top: 215px;
 }
@@ -181,4 +144,54 @@ img {
 		margin-left: auto;
 		font-size: 0.75em;
 	}	
+}
+
+//Tab View
+@media (min-width: 700px) and (max-width: 1024px) {
+	.card-container .set {
+		width: 50%;
+	}
+	aside {
+		width: 25%;
+	}
+	.card-container {
+		width: 75%;
+	}
+}
+
+//Mobile View
+@media (max-width: 700px) {
+	h4 {
+		font-size: 1em;
+		margin: 0.75em 4.75em;
+	}
+	.filters button {
+		padding: 0.5em 2.1em;
+		font-size: 0.85em;
+		margin: 0 10% 5px;	
+	}
+	.card-container .set {
+		width: 100%;
+		padding: 0;
+	}
+	aside {
+		width: 100%;
+	}
+	.card-container {
+		width: 100%;
+		padding: 15px 0 0 0;
+	}
+}
+
+// small mobile device view
+@media (max-width: 400px) {
+	h4 {
+		font-size: 1em;
+		margin: 0.75em 3em;
+	}
+	.filters button {
+		padding: 0.5em 1.75em;
+		font-size: 0.85em;;
+		margin: 0 8% 5px;	
+	}
 }

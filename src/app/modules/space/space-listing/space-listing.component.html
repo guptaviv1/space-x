@@ -43,13 +43,13 @@
                     </figure>
                     <div class="card-content">
                         <h3>{{space?.mission_name.slice(0, 10)}}.. #{{space?.flight_number}}</h3>
-                        <p>Mission Ids <span *ngIf="!space?.mission_id?.length">N.A</span></p>
+                        <p>Mission Ids: <span *ngIf="!space?.mission_id?.length">N.A</span></p>
                         <ul class="list-style">
                             <li *ngFor="let missionId of space?.mission_id"><span>{{missionId}}</span></li>
                         </ul>
-                        <p>Launch year <span>{{space?.launch_year}}</span></p>
-                        <p>Successful launch <span>{{space?.launch_success}}</span></p>
-                        <p>Successful landing <span>{{space.rocket.first_stage.cores[0].land_success ? true : false}}</span></p>
+                        <p>Launch year: <span>{{space?.launch_year}}</span></p>
+                        <p>Successful launch: <span>{{space?.launch_success}}</span></p>
+                        <p>Successful landing: <span>{{space.rocket.first_stage.cores[0].land_success ? true : false}}</span></p>
                     </div>
                 </div>
             </div>

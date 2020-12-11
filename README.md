@@ -31,3 +31,7 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 Run `npm run dev:ssr` to execute server-side rendering.
 
+## Live URL for Space-x
+
+https://space-x-datas.herokuapp.com/
+
