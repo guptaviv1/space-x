@@ -42,7 +42,7 @@
                             src="{{space?.links?.mission_patch_small}}" alt="" />
                     </figure>
                     <div class="card-content">
-                        <h3>{{space?.mission_name.slice(0, 10)}}.. #{{space?.flight_number}}</h3>
+                        <h3>{{space?.mission_name}} #{{space?.flight_number}}</h3>
                         <p>Mission Ids: <span *ngIf="!space?.mission_id?.length">N.A</span></p>
                         <ul class="list-style">
                             <li *ngFor="let missionId of space?.mission_id"><span>{{missionId}}</span></li>
